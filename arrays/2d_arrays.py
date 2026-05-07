@@ -6,9 +6,10 @@ def find_num(arr,target):
     cols = len(arr[0])
     left = 0
     right = ((rows * cols)-1)
-    mid = (left + right) // 2
+    
     
     while left <= right:
+        mid = (left + right) // 2
         row = mid // cols
         col = mid % cols
         mid_val = arr[row][col]
