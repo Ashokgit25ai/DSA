@@ -26,5 +26,5 @@ def reverse(x):
     return rev * symbol
 
 x = 123
-result = reverse(x)
-print(result)
+output = reverse(x)
+print(output)
