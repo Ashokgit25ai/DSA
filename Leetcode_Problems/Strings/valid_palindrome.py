@@ -54,8 +54,6 @@ print(isPalindrome(s))
 #### SPACE COMPLEXITY O(1) ####
 
 def isPalindrome(s):
-    # Convert string to lowercase for case-insensitive comparison
-
     # Initialize two pointers at both ends of the string
     left = 0
     right = len(s) - 1
@@ -72,7 +70,7 @@ def isPalindrome(s):
             right -= 1
 
         # Compare characters at both pointers
-        if s[left] == s[right]:
+        if s[left].lower() == s[right].lower():
             left += 1
             right -= 1
         else:
