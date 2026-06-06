@@ -47,4 +47,38 @@ print(isPalindrome(s))
 # Pattern: Two Pointers
 # Time Complexity: O(n)
 # Space Complexity: O(n)  # Due to s.lower()
-        
+
+
+
+
+### SPACE COMPLEXITY O(n) ###
+
+def isPalindrome(s):
+    # Convert string to lowercase for case-insensitive comparison
+
+    # Initialize two pointers at both ends of the string
+    left = 0
+    right = len(s) - 1
+
+    # Continue until pointers meet or cross
+    while left <= right:
+
+        # Skip non-alphanumeric characters from the left side
+        while left < right and not s[left].isalnum():
+            left += 1
+
+        # Skip non-alphanumeric characters from the right side
+        while left < right and not s[right].isalnum():
+            right -= 1
+
+        # Compare characters at both pointers
+        if s[left] == s[right]:
+            left += 1
+            right -= 1
+        else:
+            return False  # Mismatch found
+
+    return True  # All valid characters matched
+
+s = "A man, a plan, a canal: Panama"
+print(isPalindrome(s))
