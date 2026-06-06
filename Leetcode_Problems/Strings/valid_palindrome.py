@@ -51,7 +51,7 @@ print(isPalindrome(s))
 
 
 
-### SPACE COMPLEXITY O(n) ###
+#### SPACE COMPLEXITY O(1) ####
 
 def isPalindrome(s):
     # Convert string to lowercase for case-insensitive comparison
